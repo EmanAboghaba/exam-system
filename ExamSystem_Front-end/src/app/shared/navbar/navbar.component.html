@@ -1,0 +1,32 @@
+<nav class="navbar" *ngIf="showUserMenu">
+  <div class="container">
+    <button
+      class="sidebar-toggle"
+      (click)="toggleSidebar.emit()"
+      aria-label="Toggle sidebar"
+    >
+      <i class="bi bi-list"></i>
+    </button>
+
+    <a class="logo">
+      <img src="Logo.png" class="img-nav logo-img" alt="Quiz Logo" />
+    </a>
+
+    <div class="user-menu" *ngIf="showUserMenu">
+      <a class="user-info-link" [routerLink]="['/student/profile']">
+        <img
+          [src]="profileImageUrl"
+          alt="User"
+          class="user-avatar"
+          (error)="onImageError($event)"
+        />
+        <span>
+          {{ getFullName() }}
+        </span>
+      </a>
+      <button class="logout-btn" (click)="onLogOut()">
+        <i class="bi bi-box-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+</nav>

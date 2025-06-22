@@ -1,0 +1,156 @@
+:root {
+  --primary-color: #1a1a8689;
+}
+
+.login-box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+
+.left {
+  flex: 1;
+  padding: 50px 40px;
+  background-image: linear-gradient(to top, #b4bfd6 0%, #d3e2f4 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left .brand {
+  color: #000039;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.left span {
+  font-size: 35px;
+  color: #000059;
+  font-weight: 700;
+}
+
+.left h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.left .welcome {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.signup {
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.signup a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.right {
+  flex: 1;
+  padding: 30px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 992px) {
+  .login-box {
+    max-width: 720px;
+  }
+
+  .left {
+    padding: 50px 40px;
+  }
+
+  .right {
+    padding: 30px 20px;
+  }
+
+  .left .brand {
+    font-size: 24px;
+  }
+
+  .left h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-box {
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 20px;
+  }
+
+  .left,
+  .right {
+    flex: none;
+    width: 100%;
+    padding: 35px 25px;
+    border-radius: 0;
+    text-align: center;
+  }
+
+  .left {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .right {
+    border-radius: 0 0 20px 20px;
+  }
+
+  .left .brand {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .left h1 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .right img {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .left {
+    padding: 30px 20px;
+  }
+
+  .right {
+    padding: 25px 15px;
+  }
+
+  .left .brand {
+    font-size: 20px;
+  }
+
+  .left h1 {
+    font-size: 16px;
+  }
+
+  .right img {
+    max-width: 80%;
+  }
+}
